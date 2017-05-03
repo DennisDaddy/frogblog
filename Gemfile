@@ -7,6 +7,8 @@ gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "font-awesome-rails"
+gem 'friendly_id'
+gem 'devise'
 
 
 gem 'will_paginate'
