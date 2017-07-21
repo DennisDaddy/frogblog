@@ -1,13 +1,3 @@
-<div class="col-sm-6 col-lg-4">
-  <div class="card">
-    <div class="card-topper" style="background-image: url(<%= post.banner_image_url %>); ">    	
-    </div>
-    <div class="card-block">
-    <h4 class="card-title"></h4>
-    <p class="published-date"><%= post.display_day_published %></p>
-    <p class="card-text"><%= truncate(post.description, length: 130) %></p>
-    <%= link_to 'read', post, class: 'btn btn-read' %>
-    	
-    </div>  	
-  </div>	
-</div>
+<tr>
+    <td><%= link_to post.title, author_post_path(post) %></td>
+</tr>

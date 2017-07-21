@@ -2,7 +2,11 @@
 <% provide(:page_title,'All Posts') %>
 
   <div class="row">
-    <% @posts.each do |post| %>
-      <%= render post %>
-      <% end %>  
+    <table class="table table-striped">
+    	<tr>
+    		<th>Title</th>
+    	</tr>
+    	  <%= render @posts %>
+    </table>    
+     
   </div>
