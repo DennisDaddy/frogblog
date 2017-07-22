@@ -1,8 +1,8 @@
 module Blog
-		class PostsController < BlogController
+	class PostsController < BlogController
 	 
 	  def index
-	    @posts = Post.most_recent
+	    @posts = Post.most_recent.published
 	  end
 
 	  # GET /posts/1

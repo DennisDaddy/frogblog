@@ -4,6 +4,7 @@ class Post < ApplicationRecord
 	belongs_to :author
 
 	scope :most_recent, -> { order(id: :desc)}
+	scope :published, -> { where(published: true) }
 
 	def should_generate_new_friendly_id?
 		title_changed?		

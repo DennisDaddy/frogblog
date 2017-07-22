@@ -3,7 +3,10 @@ Rails.application.routes.draw do
  root to: 'blog/posts#index'
 
  namespace :authors do
- 	 resources :posts
+ 	 resources :posts do
+ 	 	put 'publish' => 'posts#publish'
+ 	 	put 'unpublish' => 'posts#unpublish'
+ 	 end
  end
 
  scope module: 'blog' do
