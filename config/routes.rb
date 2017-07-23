@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
  namespace :authors do
  	 resources :posts do
- 	 	put 'publish' => 'posts#publish'
- 	 	put 'unpublish' => 'posts#unpublish'
+ 	 	put 'publish' => 'posts#publish', on: :member
+ 	 	put 'unpublish' => 'posts#unpublish', on: :member
  	 end
  end
 
