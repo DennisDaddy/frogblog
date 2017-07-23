@@ -13,6 +13,7 @@ gem "font-awesome-rails"
 gem 'friendly_id'
 gem 'devise'
 gem 'annotate'
+gem 'acts-as-taggable-on'
 
 
 
