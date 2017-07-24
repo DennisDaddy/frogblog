@@ -11,7 +11,7 @@
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-               <li><%= link_to "Account", "#" %></li>       
+                     
                <li><%= link_to "Profile", "#" %></li>  
               <li>
                 <%= link_to "Log Out", "#" %>
@@ -20,6 +20,7 @@
           </li>   
           <% if author_signed_in? %>
                <li><%= link_to "My Posts", authors_posts_path %></li> 
+               <li><%= link_to "Account", authors_account_path %></li> 
                <li><%= link_to "Sign Out", destroy_author_session_path, method: :delete %></li> 
            <% end %>      
       </ul>
