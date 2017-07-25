@@ -1,0 +1,62 @@
+
+  <div class="row">
+  <!-- Basic info Section -->
+    <%= form_tag authors_info_path, method: :put do %>   
+    <%= fields_for :author do |f| %>
+        <div class="col-md-6">
+          <div class="card-title">
+          Hello<hr>
+            
+          </div>
+          <div class="field">
+            <%= label_tag :name %>
+            <%= text_field_tag :name, nil, class: 'form-control' %>
+         </div>  
+
+         <div class="field">
+        <%= label_tag :email %>
+        <%= email_field_tag :email, nil %>
+        </div>
+
+          <div class="field">
+            <%= label_tag :bio %>
+            <%= text_field_tag :bio, nil, class: 'form-control' %>
+           </div> 
+           <li class="list-group-item">
+             <%= submit_tag "Update Info", class: 'btn btn-primary' %>
+           </li>
+       
+       </div>  
+        <% end %>
+   <% end %>
+
+   <!-- change passowrd section -->
+     <%= form_tag authors_password_path do %>     
+     <%= fields_for :author do |f| %>
+        <div class="col-md-6">
+          <div class="card-title">
+          Change Password<hr>
+            
+          </div>
+            <div class="field">
+              <%= f.label :current_password %>
+              <%= f.password_field :current_password, class: 'form-control' %>
+           </div>  
+
+           <div class="field">
+          <%= f.label :new_password %>
+          <%= f.password_field :new_password %>
+        </div>
+
+            <div class="field">
+              <%= f.label :new_password_confirmation %>
+              <%= f.password_field :new_password_confirmation, class: 'form-control' %>
+             </div>    
+              <li class="list-group-item">
+             <%= submit_tag "Change Password", class: 'btn btn-warning' %>
+           </li>      
+       </div>  
+       <% end %>
+    <% end %>
+  </div>
+  
