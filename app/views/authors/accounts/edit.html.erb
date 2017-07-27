@@ -10,17 +10,17 @@
           </div>
           <div class="field">
             <%= f.label :name %>
-            <%= f.text_field :name, class: 'form-control' %>
+            <%= f.text_field :name, value: current_author.name, class: 'form-control' %>
          </div>  
 
          <div class="field">
         <%= f.label :email %>
-        <%= f.email_field :email %>
+        <%= f.email_field :email,  value: current_author.email %>
         </div>
 
           <div class="field">
             <%= f.label :bio %>
-            <%= f.text_field :bio, class: 'form-control' %>
+            <%= f.text_field :bio, value: current_author.name, class: 'form-control' %>
            </div> 
            <li class="list-group-item">
              <%= f.submit "Update Info", class: 'btn btn-primary' %>
