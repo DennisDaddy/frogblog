@@ -19,8 +19,15 @@ module Authors
 				 current_author.update(
 				 	password: author_password_params[:new_password],
 				 	password_confirmation: author_password_params[:new_password_confirmation]
-				 	)				
+				 	)	
+				 flash[:success] = 'password successful updated'
+
+				 	else
+
+				 	flash[:danger] = 'Current password was incorrect'			
 			end
+
+			redirect_to authors_account_path
 			
 		end
 
